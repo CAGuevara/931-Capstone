@@ -13,6 +13,7 @@ search = TavilySearchResults(max_results=2)
 parser = StrOutputParser()
 
 #Page Header
+st.divider()
 st.title("Assistant Agent")
 st.markdown("Assistant Agent Power by the Casi Nada Company!")
 # Data collection/inputs
