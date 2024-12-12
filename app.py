@@ -13,18 +13,20 @@ search = TavilySearchResults(max_results=2)
 parser = StrOutputParser()
 
 #Page Header
-st.divider()
+
 st.title("Assistant Agent")
 st.markdown("Assistant Agent Power by the Casi Nada Company!")
 # Data collection/inputs
-with st.form("company_info", clear_on_submit=True):
-    vendor_name = st.text_input("**Sales Representative** (What is your name?):")
-    product_name = st.text_input("**Product Name** (What product are you selling?):")
-    company_url = st.text_input("**Company URL** (The URL of the company you are targeting):")
-    product_category = st.text_input("**Product Category** (e.g., 'Data Warehousing' or 'Cloud Data Platform')")
-    competitors_url = st.text_input("**Competitors URL** (ex. www.apple.com):")
-    value_proposition = st.text_input("**Value Proposition** (A sentence summarizing the product’s value):")
-    target_customer = st.text_input("**Target Customer** (Name of the person you are trying to sell to.) :")
+
+with st.form("company_info", clear_on_submit=True, border = True):
+    st.divider()
+    vendor_name = st.text_input("What is your name?", help="This is the name of the Assistant")
+    product_name = st.text_input("**What is the name of the Product**", help="What is the product you are trying to promote")
+    company_url = st.text_input("**Company URL**", help= "The URL of the company you are targeting")
+    product_category = st.text_input("**Product Category**" ,help="What is the category of the product, i.e.: Smartphones, Electric Cars")
+    competitors_url = st.text_input("**Competitors URL**", help= "Example: www.apple.com")
+    value_proposition = st.text_input("**Value Proposition**", help="A sentence summarizing the product’s value")
+    target_customer = st.text_input("**Target Customer**", help= "Name of the person you are trying to sell to")
 
     # For the llm insights result
     company_insights = ""
