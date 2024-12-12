@@ -37,14 +37,16 @@ with st.form("company_info", clear_on_submit=True):
             print(company_information)
             #Create prompt <=================
             prompt = """
-            Act as a successful vendor to create a compelling, one-page sales pitch designed to engage a target company based on publicly available web data. The pitch should be concise, persuasive, and tailored to highlight how our product or service aligns with the company's strategy, leadership priorities, and market positioning. Maintain a formal and professional tone with a sales-oriented approach. Strictly adhere to the following structure:
+            Act as a successful vendor to create a compelling, one-page sales pitch designed to engage a target company based on publicly available web data. 
+            The pitch should be concise, persuasive, and tailored to highlight how the product or service aligns with the company's strategy, leadership priorities, and market positioning. 
+            Maintain a formal and professional tone with a sales-oriented approach. Strictly adhere to the following structure:
 
             1. Opening Statement (2-3 sentences):
             - Craft a personalized introduction that grabs the attention of key decision-makers.
             - Mention a specific leadership figure or recent public statement to establish credibility.
 
             2. Value Proposition (2-3 bullet points):
-            - Align our {product_name} benefits with the company's current strategy or priorities, referencing specific insights from job postings, public reports, or press releases.
+            - Align our {product_name} benefits with the {company_information}'s current strategy or priorities, referencing specific insights from job postings, public reports, or press releases.
             - Highlight how our solution addresses 1-2 specific pain points or opportunities relevant to the {target_customer}.
 
             3. Competitor Positioning (1-2 sentences):
