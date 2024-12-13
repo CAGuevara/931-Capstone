@@ -15,18 +15,19 @@ parser = StrOutputParser()
 #Page Header
 
 st.title("Assistant Agent")
-st.markdown("Assistant Agent Power by the Casi Nada Company!")
+st.markdown("**Empower Your Vision: Showcase Your Product with Expert Support!**")
+st.divider()
 # Data collection/inputs
 
 with st.form("company_info", clear_on_submit=True, border = True):
-    #st.divider()
-    vendor_name = st.text_input("What is your name?", help="This is the name of the Assistant")
+   
+    vendor_name = st.text_input("**What is your name?**", help="This is the name of the Assistant")
     product_name = st.text_input("**What is the name of the Product**", help="What is the product you are trying to promote")
-    company_url = st.text_input("**Company URL**", help= "The URL of the company you are targeting")
-    product_category = st.text_input("**Product Category**" ,help="What is the category of the product, i.e.: Smartphones, Electric Cars")
-    competitors_url = st.text_input("**Competitors URL**", help= "Example: www.apple.com")
+    company_url = st.text_input("**What is the Company URL**", help= "The URL of the company you are targeting")
+    product_category = st.text_input("**What is the Product Category**" ,help="What is the category of the product, i.e.: Smartphones, Electric Cars")
+    competitors_url = st.text_input("**Our Competitors URL**", help= "Example: www.apple.com")
     value_proposition = st.text_input("**Value Proposition**", help="A sentence summarizing the product’s value")
-    target_customer = st.text_input("**Target Customer**", help= "Name of the person you are trying to sell to")
+    target_customer = st.text_input("**What is the name of the target Customer**", help= "Name of the person you are trying to sell to")
 
     # For the llm insights result
     company_insights = ""
@@ -38,9 +39,9 @@ with st.form("company_info", clear_on_submit=True, border = True):
             # Use search tool to get Company Information
             company_information = search.invoke(company_url)
             print(company_information)
-            #Create prompt <=================
+            #Create prompt 
             prompt = """
-            Act as a successful vendor to create a compelling, one-page sales pitch designed to engage a target company based on publicly available web data. 
+            Act as a successful vendor manager to create a compelling, one-page sales pitch designed to engage a target company based on publicly available web data. 
             The pitch should be concise, persuasive, and tailored to highlight how the product or service aligns with the company's strategy, leadership priorities, and market positioning. 
             Maintain a formal and professional tone with a sales-oriented approach. Strictly adhere to the following structure:
 
