@@ -16,7 +16,7 @@ parser = StrOutputParser()
 
 st.title("Assistant Agent")
 st.markdown("**Empower Your Vision: Showcase Your Product with Expert Support!**")
-st.divider()
+#st.divider()
 # Data collection/inputs
 
 with st.form("company_info", clear_on_submit=True, border = True):
