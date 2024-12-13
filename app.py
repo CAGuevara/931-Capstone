@@ -19,7 +19,7 @@ st.markdown("Assistant Agent Power by the Casi Nada Company!")
 # Data collection/inputs
 
 with st.form("company_info", clear_on_submit=True, border = True):
-    st.divider()
+    #st.divider()
     vendor_name = st.text_input("What is your name?", help="This is the name of the Assistant")
     product_name = st.text_input("**What is the name of the Product**", help="What is the product you are trying to promote")
     company_url = st.text_input("**Company URL**", help= "The URL of the company you are targeting")
